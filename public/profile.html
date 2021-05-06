@@ -1,0 +1,168 @@
+<html>
+   <head>
+      <title>Profile</title>
+      <script src="/__/firebase/8.3.0/firebase-app.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="/__/firebase/8.3.0/firebase-analytics.js">
+        </script><!-- Add Firebase products that you want to use -->
+        <script src="/__/firebase/8.3.0/firebase-auth.js"></script>
+        <script src="/__/firebase/8.3.0/firebase-firestore.js"></script>
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+        <script src="/JavaScripts/login.js"></script> <!-- used to call functions such as login and loginWithGoogle-->
+      
+      <!-- Initialize Firebase -->
+      <script src="/JavaScripts/verification.js"></script>
+      <script src="/JavaScripts/FriendsSearch.js"></script>
+      <script src="/JavaScripts/profile.js"></script>
+      <script src="/JavaScripts/main.js"></script>
+      <script src="/JavaScripts/myPolls.js"></script>
+      <script src="/JavaScripts/livechat.js"></script>
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+      <style>
+             	body{
+                       background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+  }
+      </style>
+        <link rel="stylesheet" href="/CSS/yesno.css">
+   </head>
+   <body onload="checkLoggedIn();">
+         <div class="card text-center">
+            <div class="card-header">
+              <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="./myPolls.html">My Polls</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./friends_polls.html">Friends Polls</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./createAPoll.html">Create Poll</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./friends.html">Contacts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./poll_finder.html">Poll Finder</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="./profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" style="color: #0275d8;" onclick="newPopup();">Global Chat</a>
+              </li>
+              </ul>
+            </div>
+         <div class="container">
+            <div class="row flex-lg-nowrap">
+               <div class="col">
+                  <div class="row">
+                     <div class="col mb-3">
+                        <div class="card">
+                           <div class="card-body">
+                              <div class="e-profile">
+                                 <div class="row">
+                                    <div class="col-12 col-sm-auto mb-3">
+                                       <div class="mx-auto" style="width: 140px;">
+                                          <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                                             <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                                       <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                          <h4 id="display_Name" class="pt-sm-2 pb-1 mb-0 text-nowrap">Team diVersity</h4>
+                                          <p id="user_Name" class="mb-0">@teamdiversity</p>
+                                          <div class="mt-2">
+                                             <label class="btn btn-primary" for="my-file-selector">
+                                             <input id="my-file-selector" type="file" class="d-none" accept="image/*">
+                                             <i class="fa fa-fw fa-camera"></i>
+                                             Change Photo
+                                             </label>
+                                          </div>
+                                       </div>
+                                       <div class="text-center text-sm-right">
+                                          <div class="text-info"><big>Edit Profile</big>
+                                             <i class="bi bi-arrow-down"></i>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tab-content pt-3">
+                                    <div class="tab-pane active">
+                                       <form class="form" novalidate="">
+                                          <div class="row">
+                                             <div class="col">
+                                                <div class="row">
+                                                   <div class="col">
+                                                      <div class="form-group">
+                                                         <label>Full Name</label>
+                                                         <textarea  id="changeNameBar" class="form-control" type="text" name="name" placeholder="Full Name"></textarea>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                                <div class="row">
+                                                   <div class="col mb-3">
+                                                      <div class="form-group">
+                                                         <label>About</label>
+                                                         <textarea id="changeBioBar" class="form-control" rows="5" placeholder="My Bio"></textarea>
+                                                      </div>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="row">
+                                             <div class="col d-flex justify-content-end">
+                                                <button class="btn btn-primary" onclick="updateProfile();">Save Changes</button>
+                                                </div>
+                                          </div>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12 col-md-3 mb-3">
+                        <div class="card mb-3">
+                           <div class="card-body">
+                            <div class="px-xl-3">
+                                <div class="form-group">
+
+                                 <div class="mx-auto">
+
+                                 <button class="btn btn-success btn-lg" onclick="window.location.replace('./createAPoll.html')">Create a Poll!</button>
+                                 </div>
+                                 </div>
+                                 <div class="form-group">
+
+                                 <div class="mx-auto">
+
+                                 <button  href="./myPolls.html" onclick="window.location.replace('./myPolls.html')" class="btn btn-success btn-lg">My Polls</a>
+                                    </button>
+                                    </div>
+                                    </div>
+                                    <div class="form-group">
+
+                                    <button id="logout" onclick="logout();" class="btn btn-danger btn-lg">
+                                        <i class="fa fa-sign-out"></i>
+                                        <span>Logout</span>
+                                        </button>
+                                        </div>
+                                </div>
+                            </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script type="text/javascript"></script>
+   </body>
+</html>

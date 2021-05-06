@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contacts</title>
+        <script src="/__/firebase/8.3.0/firebase-app.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="/__/firebase/8.3.0/firebase-analytics.js">
+        </script><!-- Add Firebase products that you want to use -->
+        <script src="/__/firebase/8.3.0/firebase-auth.js"></script>
+        <script src="/__/firebase/8.3.0/firebase-firestore.js"></script>
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+        <script src="/JavaScripts/login.js"></script> <!-- used to call functions such as login and loginWithGoogle-->
+        
+        <link rel="stylesheet" type="text/css" href="/CSS/friends.css">
+        <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/css/mdb.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/JavaScript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/js/jquery.min.js"></script>
+        <script type="text/JavaScript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/js/mdb.min.js"></script>
+        <script src="/JavaScripts/poll_finder.js"> </script>
+        
+        <link rel="stylesheet" href="/CSS/yesno.css">
+        <link rel="stylesheet" href="/CSS/slider.css">
+        <link rel="stylesheet" href="/CSS/categor.css">
+        <script src="/JavaScripts/verification.js"></script>
+        <script src="/JavaScripts/FriendsSearch.js"></script>
+        
+    </head>
+
+    <body onload=checkLoggedIn()>
+        <div class="card text-center">
+            <div class="card-header">
+              <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="myPolls.html">My Polls</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="friends_polls.html">Friends Polls</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="createAPoll.html">Create Poll</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="friends.html">Contacts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="poll_finder.html">Poll Finder</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #0275d8;" href="livechat.html">Global Chat</a>
+                </li>
+              </ul>
+            </div>
+          <div class="card text-center">
+        <div class="my_custom_container1">
+            <div class='row'>
+                <div class="col-sm-4">
+
+                </div>
+                <div class="col-sm-8>">
+                    <div class="f_box1">
+                        <button class="button" onclick="openTab(event,'Invite'); showNotification();">Friend Requests</button>
+                    </div>
+                    <div class="f_box">
+                        <button class="button1" onclick="openTab(event,'Friend'); showFriends();">Friends</button>
+                    </div>                  
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="search-wrapper active">
+                        <div class="input-holder">
+                            <input type="text" id="SearchFriendsBar" class="search-input" placeholder="Find Friends">
+                            <button class="search-icon" data-toggle="modal" data-target="#myModal" onclick="friendsSearch()"><span></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="modelMan">
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog" >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Send Friend Request</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div id="displayResults">
+            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="row1">
+            <div class="container">
+                <div id="Invite" class="inviteBox" style="display:none;">
+                    <div class="row">
+                        <div id="noFriendRequests" style="position: relative; left:15%; color:rgb(22, 108, 207); font-size: 200%; display:none;"><br>It seems people don't want to be your friend</br><br>
+                            
+                        </div>
+                        <div class="col">
+                            <div id="inviteBoxCol1">
+                                
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div id="inviteBoxCol2">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Friend" class="inviteBox" style="display:none;" >
+                    <div class="row">
+                        <div id="noFriends" style="position: relative; left:22%; color:rgb(22, 108, 207); font-size: 200%; display:none;"><br>You're a loner! Get some friends!</br><br>
+                        
+                        </div>
+                        <div class="col">
+                            <div id="friendBoxCol1">
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div id="friendBoxCol2">
+
+                            </div>
+                        </div>    
+                    </div>         
+                </div>
+            </div>
+        </div>
+        <script src="/JavaScripts/dmchat.js"></script>
+    </body>
+</html>

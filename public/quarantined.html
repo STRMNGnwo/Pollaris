@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Quarantine</title>
+        <script src="/__/firebase/8.3.0/firebase-app.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="/__/firebase/8.3.0/firebase-analytics.js">
+        </script><!-- Add Firebase products that you want to use -->
+        <script src="/__/firebase/8.3.0/firebase-auth.js"></script>
+        <script src="/__/firebase/8.3.0/firebase-firestore.js"></script>
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+        <link rel="stylesheet" type="text/css" href="/CSS/quarantined.css">
+        <script src="/JavaScripts/login.js"></script>
+        <script src="/JavaScripts/verification.js"></script>
+    </head>
+    <body onload="logout2();">
+        <div id="container">
+            <div class="content">
+                <h1>⚠️</h1>
+                <h2>QUARANTINED</h2>
+                <h4>Your email is not verified! Follow the link in your email and try again.</h4>
+                <a href="sign_in.html">Back to Login</a>
+            </div>
+        </div>
+    </body>
+</html>

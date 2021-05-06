@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSS/yesno.css">
+    <link rel="stylesheet" href="/CSS/slider.css">
+    <link rel="stylesheet" href="/CSS/map.css">
+    <script src="https://polyfill.io/v3/polyfill.js?features=default"></script>
+    <link rel="stylesheet" type="text/css" href="/CSS/map.css" />
+    <script src="/JavaScripts/map.js"></script>
+    <script src="/JavaScripts/verification.js"></script>
+    <script src="/JavaScripts/livechat.js"></script>
+    <script src="/JavaScripts/login.js"></script> <!-- used to call functions such as login and loginWithGoogle-->
+    <title>Settings</title>
+  </head>
+  <body onload="checkLoggedIn();">
+    <div class="card text-center">
+      <div class="card-header">
+        <ul class="nav nav-pills card-header-pills">
+          <li class="nav-item">
+            <a class="nav-link" href="myPolls.html">My Polls</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="friends_polls.html">Friends Polls</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="createAPoll.html">Create Poll</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="friends.html">Contacts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="poll_finder.html">Poll Finder</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="profile.html">Profile</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="color: #0275d8;" onclick="newPopup();">Global Chat</a>
+        </li>
+        </ul>
+      </div>
+    <div class="card text-center">
+        <div class="card-header">
+          <ul class="nav nav-pills card-header-pills">
+            <li class="nav-item">
+              <a class="nav-link" href="createAPoll.html">Multiple Choice</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">Categorical</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="settings.html" tabindex="-1" aria-disabled="true">Settings</a>
+            </li>
+          </ul>
+        </div>
+        <h1 style="font-size: medium;">Select Radius</h1>
+        <div class="card-body">
+          <div class="container">
+            <div class="value">5 km</div>
+            <input type="range" min="5" max="50" step="5" value="5">
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="/JavaScripts/slider.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLZPww_jYsogAXKmqs4XQnuI-odhd7ZTc&callback=initMap&libraries=&v=weekly"
+    async
+    >
+  </script>
+  </body>
+</html>
