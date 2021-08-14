@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Friends Polls</title>
+        <script src="/__/firebase/8.3.0/firebase-app.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="/__/firebase/8.3.0/firebase-analytics.js">
+        </script><!-- Add Firebase products that you want to use -->
+        <script src="/__/firebase/8.3.0/firebase-auth.js"></script>
+        <script src="/__/firebase/8.3.0/firebase-firestore.js"></script>
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+        <script src="/JavaScripts/login.js"></script> <!-- used to call functions such as login and loginWithGoogle-->
+        <script src="/JavaScripts/livechat.js"></script>
+        <script src="/JavaScripts/myPolls.js"></script>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/css/mdb.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/JavaScript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/js/jquery.min.js"></script>
+        <script type="text/JavaScript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/js/mdb.min.js"></script>
+        <script src="/JavaScripts/verification.js"></script>
+        <link rel="stylesheet" type="text/css" href="/CSS/myPolls.css">
+        
+    </head>
+    <body onload=checkLoggedIn()>
+        <div class="card text-center">
+            <div class="card-header">
+                <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="myPolls.html">My Polls</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="friends_polls.html">Friends Polls</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="createAPoll.html">Create Poll</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="friends.html">Contacts</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="poll_finder.html">Poll Finder</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #0275d8;" onclick="newPopup();">Global Chat</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="flexbox">
+                <div class="search">
+                    <div>
+                        <input type="text" id="pollIDArea" placeholder="Input Poll ID">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div button class="primaryButton1" type="submit" style="left:40%;" onclick=searchPolls(true)>Public</div>
+            <div button class="primaryButton1" type="submit" style="left:48%;" onclick=searchPolls(false)>Private</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="custom_container">
+                    <h1>Public Polls</h1>
+                    <div id="publicFriendsPollBox">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="custom_container">
+                    <h1>Private Polls</h1>
+                    <div id="privateFriendsPollBox">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

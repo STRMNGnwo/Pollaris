@@ -1,0 +1,370 @@
+html{
+    background-color:lightblue;
+    
+}
+
+head {
+    font: 15px/15px "Lucida Grande", Tahoma, Verdana, sans-serif;
+    color: #404040;
+    
+}
+
+.my_custom_container1{
+    width: 100%;
+    margin-top:5%;
+    background-color: white;
+}
+
+.row{
+    width: 100%;
+    
+}
+
+.my_custom_container1 img{
+    
+    position: relative;
+    width: 100%;
+    height: 70%;
+    margin-top: 25%;
+    
+    margin-left: 50%;
+    
+    
+}
+
+.login {
+    
+    position: relative;
+    left: 175%;
+    margin: 15% auto;
+    padding: 9.5% 9.5% 9.5%;
+    width: 150%;
+    height: 85%;
+    background: white;
+    border-radius: 3%;
+    -webkit-box-shadow: 10 10 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.login h1 {
+    margin: -20px -20px 21px;
+    line-height: 60px;
+    font-size: 50px;
+    font-family: 'Brush Script MT', cursive;
+    color: purple;
+    text-align: center;
+    text-shadow: 0 2px grey;
+    background: rgb(228, 180, 221);
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 5px 5px 0 0;
+    -webkit-box-shadow: 0 1px whitesmoke;
+    box-shadow: 0 1px grey;
+  }
+
+  .login input[type=text], .login input[type=password] {
+    width: 95%;
+  }
+
+  .login p.submit {
+    text-align: center;
+  }
+
+  .login p.login_help a {
+      position: absolute;
+      top: 75%;
+      left: 25%;
+      text-align: center;
+      font-size: 100%;
+      color: blue;
+  }
+
+  .login p.login_reg a{
+    position: absolute;
+    left: 28%;
+    top: 65%;
+    text-align: right;
+    font-size: 100%;
+    color: blue;
+  }
+
+  .primaryButton {
+    position: relative;
+    padding: 0 25px;
+    width:20%;
+    height: 31px;
+    left:80px;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 1px #e3f1f1;
+    background: rgb(235, 175, 232);
+    border: 1px solid;
+    border-color: black black black;
+    border-radius: 40px;
+   -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-box-shadow: inset 0 5px white, 0 5px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px rgb(235, 175, 232), 0 1px 2px rgba(0, 0, 0, 0.15);
+  }
+
+  input[type=text], input[type=password] {
+    margin: 5px;
+    padding: 0 10px;
+    width: 200px;
+    height: 34px;
+    color: #404040;
+    background: white;
+    border: 1px solid;
+    border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+    border-radius: 2px;
+    outline: 5px solid #eff4f7;
+    -moz-outline-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+  }
+/*
+
+    --------------------------------------------------------------FORGOT PASSWORD CSS ----------------------------------------------------
+
+*/
+
+.top_custom_container{
+    background-color: lightblue;
+    width: 100%;
+    height: 60px;
+    
+}
+
+
+.headerBar h2{
+    font-family: 'Brush Script MT', cursive;
+    font-size: 50px;
+    color: purple;
+    text-align: center;
+    
+}
+
+
+.my_custom_container2{
+    background-color: white;
+    width: 100%;
+    
+}
+.forgottonPass{
+    position: relative;
+    top: 45px;
+    left: 100px;
+    margin: 50px auto;
+    margin-bottom: 150px;
+    padding: 20px 20px 20px;
+    width: 300px;
+    height: 275px;
+    background: white;
+    border-radius: 15px;
+    -webkit-box-shadow: 10 10 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.forgottonPass h1{
+    margin: -20px -20px 21px;
+    line-height: 30px;
+    padding-top: 10px;
+    font-size: 25px;
+    font-family: "Avenir Next", "Helvetica Neue", Helvetica, Arial, sans-serif !important;;
+    font-weight: bold;
+    color: Black;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+}
+
+.description{
+    margin: 2px 12px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    width: unset;
+    color: #656B73;
+}
+
+.forgottonPass input[type=text] {
+    width: 500px;
+}
+
+.forgottonPass input[type=text]{
+    margin: 20px;
+    padding: 0 10px;
+    width: 250px;
+    height: 30px;
+    color: #404040;
+    font-size: 14px;
+    background: white;
+    border: 1px solid;
+    border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+    border-radius: 2px;
+    outline: 5px solid #eff4f7;
+    -moz-outline-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.forgottonPass input[type=submit] {
+    padding: 0 25px;
+    height: 31px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 1px #e3f1f1;
+    background: rgb(235, 175, 232);
+    border: 1px solid;
+    border-color: black black black;
+}
+
+.forgottonPass p.submit {
+    text-align: center;
+}
+
+
+/*
+
+    --------------------------------------------------------------SIGN UP CSS ----------------------------------------------------
+
+*/
+
+.my_custom_container3{
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    margin-top: 40px;
+    background-color: white;
+}
+
+.my_custom_container3 img{
+    max-width: 100%;
+    height: 60%;
+    margin-top: 20%;
+    float: left;
+    margin-left: 10%;
+}
+
+.my_custom_container3 img.rounded.float-right{
+    position: absolute;
+    margin-left: 50%;
+    width: 80%;
+    
+}
+
+.my_custom_container3 img.rounded.float-top{
+    position: relative;
+    margin-left: 80%;
+    
+    margin-top: 50%;
+    height: 40%;
+    width: 30%;
+    
+}
+
+.signUp {
+    position: relative;
+    left: 125px;
+    margin: 50px auto;
+    padding: 20px 20px 20px;
+    width: 600px;
+    height: 440px;
+    background: white;
+    border-radius: 10px;
+    -webkit-box-shadow: 10 10 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 200px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.starter{
+    margin: 2px 12px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    width: unset;
+    color: #656B73;
+}
+
+.signUp h1 {
+    margin: -20px -20px 21px;
+    line-height: 60px;
+    font-size: 50px;
+    font-family: 'Brush Script MT', cursive;
+    color: purple;
+    text-align: center;
+    text-shadow: 0 2px grey;
+    background: rgb(228, 180, 221);
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 3px 3px 0 0;
+    -webkit-box-shadow: 0 1px whitesmoke;
+    box-shadow: 0 1px grey;
+}
+
+
+
+.signUp p.submit {
+    text-align: center;
+}
+
+.signUp p.login_help {
+    margin:30px;
+    text-align: center;
+    position: relative;
+    top:35px;
+    right:20px;
+    
+}
+
+.signUp a {
+    position: relative;
+    top:130%;
+    right:325%;
+    color: blue;
+}
+
+  
+
+.secondaryButton{
+    position: relative;
+    padding: 0 20px;
+    width:30%;
+    height: 30px;
+    left: 175px;
+    top:20px;
+    text-align: center;
+    font-size: 120%;
+    font-weight: bolder;
+    color: white;
+    text-shadow: 0 1px #e3f1f1;
+    background: rgb(235, 175, 232);
+    border: 1px solid;
+    border-color: black black black;
+    border-radius: 40px;
+   -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-box-shadow: inset 0 5px white, 0 5px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: inset 0 1px rgb(235, 175, 232), 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.signUp input[type=text], input[type=password] {
+    margin: 5px;
+    padding: 0 10px;
+    width: 250px;
+    height: 34px;
+    color: #404040;
+    background: white;
+    border: 1px solid;
+    border-color: #c4c4c4 #d1d1d1 #d4d4d4;
+    border-radius: 2px;
+    outline: 5px solid #eff4f7;
+    -moz-outline-radius: 3px;
+    -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+
+

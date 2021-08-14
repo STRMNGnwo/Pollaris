@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <title>Sign-Up</title>
+    <head>
+        <script src="/JavaScripts/SignUp.js"> </script>
+
+        <script src="/__/firebase/8.3.0/firebase-app.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="/__/firebase/8.3.0/firebase-analytics.js">
+        </script><!-- Add Firebase products that you want to use -->
+        <script src="/__/firebase/8.3.0/firebase-auth.js"></script>
+        <script src="/__/firebase/8.3.0/firebase-firestore.js"></script>
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="HandheldFriendly" content="true">
+        <link rel="stylesheet" type="text/css" href="/CSS/sign_in.css">
+        <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/css/mdb.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <div class="my_custom_container3">
+            <div class='row'>
+                <div class="col-sm-4">
+                    <img src="/Images/poll_sign_up1.PNG" class="rounded float-left" alt="...">
+                </div>
+                <div class="col-sm-4>">
+                    <div class="signUp">
+                        <h1>Pollaris</h1>
+                        <div class="starter">
+                            <p>
+                                Be able to connect with others
+                            </p>
+                        </div>
+                        <div class='row'>
+                            <div class="col-sm-6">
+                                <form autocomplete="on">
+                                    <p>
+                                        <input type="text" id="UserName" autocomplete="off" value = "" placeholder = "Username" required>
+                                    </p>
+                                    <p>
+                                        <input type="text" id="Email" value = "" placeholder = "Email address" required>
+                                    </p>
+                                    <p>
+                                        <input type="password" id="password" autocomplete="off" value = "" placeholder = "Password" required>
+                                    </p>
+                                </form>
+                            </div>
+                            <div class="col-sm-6">
+                                <form autocomplete="on">
+                                    <p>
+                                        <input type="text" id="Name" autocomplete="off" placeholder = "Name" required>
+                                    </p>
+                                    <p>
+                                        <input type="text" id="userBio" style="height:94px;" autocomplete="off" placeholder = "Bio" required>
+                                    </p>
+                                </form>
+                            </div>
+                            <p
+                                button class="secondaryButton" type="submit" value=""onclick="signUp()">Create Account</button>
+                            </p>
+                            <p
+                                class="login_help">Have an account? 
+                            </p>
+                            <p>
+                                <a href="sign_in.html"> Login</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/JavaScript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/js/jquery.min.js"></script>
+        <script type="text/JavaScript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/js/mdb.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <title>Poll Finder</title>
+    <head>
+        <script src="/__/firebase/8.3.0/firebase-app.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="/__/firebase/8.3.0/firebase-analytics.js">
+        </script><!-- Add Firebase products that you want to use -->
+        <script src="/__/firebase/8.3.0/firebase-auth.js"></script>
+        <script src="/__/firebase/8.3.0/firebase-firestore.js"></script>
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+        <script src="/JavaScripts/login.js"></script> <!-- used to call functions such as login and loginWithGoogle-->
+        
+        <link rel="stylesheet" type="text/css" href="/CSS/main.css">
+        <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/css/mdb.min.css">
+        <link rel="stylesheet" type="text/css" href="/CSS/myPolls.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/JavaScript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/js/jquery.min.js"></script>
+        <script type="text/JavaScript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/js/mdb.min.js"></script>
+        
+        <script src="/JavaScripts/poll_finder.js"></script>
+        <script src="/JavaScripts/findPoll.js"></script>
+        <script src="/JavaScripts/verification.js"></script>
+        <script src="/JavaScripts/livechat.js"></script>
+        <link rel="stylesheet" href="/CSS/yesno.css">
+        <link rel="stylesheet" href="/CSS/slider.css">
+        <link rel="stylesheet" href="/CSS/categor.css">
+    </head>
+    
+    <body onload=checkLoggedIn()>
+        <div class="card text-center">
+            <div class="card-header">
+              <ul class="nav nav-pills card-header-pills">
+                <li class="nav-item">
+                    <a class="nav-link" href="myPolls.html">My Polls</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="friends_polls.html">Friends Polls</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="createAPoll.html">Create Poll</a>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="friends.html">Contacts</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="poll_finder.html">Poll Finder</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" style="color: #0275d8;" onclick="newPopup();">Global Chat</a>
+                </li>
+              </ul>
+            </div>
+            <div id="circle">
+                <div id="all-circle" style="display:none;">
+                    <div class="circle one">
+                        <div class="circle two">
+                            <div class="circle three">
+                                <div class="circle four">
+                                    <div class="circle five">
+                                        <div class="circle six">
+                                            <div class="circle seven">
+                                                <div class="circle eight">
+                                                    <div class="circle nine">
+                                                        <div class="circle ten"></div>                                                            
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>                 
+            <div class="full-panel">
+                <div class="center">
+                    <div id="all-trans" style="display:none;">
+                        <div class="trans trans-left"></div>
+                        <div class="trans trans-right"></div>
+                        <div class="trans trans-top"></div>
+                        <div class="trans trans-bottom"></div>
+                    </div>  
+                    <div class="button">                   
+                        <input type="image" data-toggle="modal" data-target="#myModal" src="/Images/pollarisSnip1.png" width="70%" height="70%" onclick="ani(); pollFinder12345();"/>
+                        <p id="demo"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="modelMan" id="modomodo">
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered" >
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Nearby Polls</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div id="noNearbyPolls" style="color:rgb(22, 108, 207); font-size: 200%; display:none;"><br>No polls nearby!</br><br>
+
+                                </div>
+                                <div id="displayPollFinderResults">
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="circle1">
+                <div id="all-circle1" style="display:none;"> 
+                    <div class="circle one">
+                        <div class="circle two">
+                            <div class="circle three">
+                                <div class="circle four">
+                                    <div class="circle five">
+                                        <div class="circle six">
+                                            <div class="circle seven">
+                                                <div class="circle eight">
+                                                    <div class="circle nine">
+                                                        <div class="circle ten"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </body>
+</html>
