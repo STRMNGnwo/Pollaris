@@ -1,0 +1,301 @@
+@import url(https://fonts.googleapis.com/css?family=Numans);
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,400i,700");
+
+body {
+    font-family: 'Numans', sans-serif;
+    background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+    max-width:100%;
+    overflow-x: hidden;
+  }
+
+
+.custom_container{
+   position: relative;
+   width:auto;
+   height: auto;
+   left:10%;
+}
+
+
+h1{
+    position: relative; 
+    top:5%;
+    left:23%;
+    color: white;
+    text-decoration: underline;
+}
+h2{
+    position: relative; 
+    top:5%;
+    left:15%;
+    color: white;
+    text-decoration: underline;
+    font-size: 250%;
+}
+
+.my_custom_container_pollFinder{
+  position: relative;
+  border: 5px solid blue;
+  top: 10%;
+  right: 9%;
+  border-radius: 30px;
+  background-color: rgb(235, 247, 130);
+  padding-left:3%;
+  padding-top:5px;
+  padding-bottom:5px;
+  width: 30%;
+  height: auto;
+  
+}
+
+.my_custom_container{
+    position: relative;
+    border: 5px solid black;
+    top: 10%;
+    left:15%;
+    border-radius: 30px;
+    background-color: rgb(235, 247, 130);
+    padding-left:3%;
+    padding-top:5px;
+    padding-bottom:5px;
+    
+    height: auto;
+}
+
+
+.question{
+      position: relative;
+      font-size: 80%;
+      left: 35%;
+      text-decoration: underline;
+}
+  
+
+::selection{
+  color: #fff;
+  background: #6665ee;
+}
+.wrapper{
+  background: rgb(235, 247, 130);
+  border-radius: 15px;
+  padding: 25px;
+  max-width: 380px;
+  width: 100%;
+  
+}
+.wrapper header{
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-align: center;
+  position: relative;
+  right:5%;
+}
+.wrapper .poll-area{
+  margin: 20px 0 15px 0;
+}
+.poll-area label{
+  display: block;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 8px 15px;
+  border: 2px solid #e6e6e6;
+  transition: all 0.2s ease;
+}
+.poll-area label:hover{
+  border-color: #ddd;
+}
+label.selected{
+  border-color: #1CB5E0!important;
+}
+label .row{
+  display: flex;
+  pointer-events: none;
+  justify-content: space-between;
+}
+label .row .column{
+  display: flex;
+  align-items: center;
+}
+
+.circle .circle20{
+    left:15%;
+}
+
+label .row .circle .circle20{
+  height: 19px;
+  width: 19px;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative;
+}
+label.selected .row .circle .circle20{
+  border-color: blue;
+}
+label .row .circle20::after .circle::after {
+  content: "";
+  height: 11px;
+  width: 11px;
+  background: blue;
+  border-radius: inherit;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  display: none;
+}
+.poll-area label:hover .circle20::after .row .circle::after{
+  display: block;
+  background: #e6e6e6;
+}
+label.selected .row .circle20::after .circle::after{
+  display: block;
+  background: #1CB5E0!important;
+}
+label .row span{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.text{
+    position: relative;
+    left:10%;
+}
+
+
+.percent{
+    position: relative;
+    right:5%;
+}
+
+.percent1{
+  position: relative;
+  left:7%;
+}
+
+label .row .percent .percent1{
+  
+}
+label .progress{
+  height: 7px;
+  width: 100%;
+  position: relative;
+  background: #f0f0f0;
+  margin: 8px 0 3px 0;
+  border-radius: 30px;
+  
+  pointer-events: none;
+}
+label .progress:after{
+  position: absolute;
+  content: "";
+  left: 0%;
+  height: 100%;
+  background: blue;
+  width: calc(1% * var(--w));
+  border-radius: inherit;
+  transition: all 0.2s ease;
+}
+label.selected .progress::after{
+  background: blue;
+}
+label.selectall .progress,
+label.selectall .row .percent .percent1{
+  display: block;
+}
+input[type="radio"],
+input[type="checkbox"]{
+  display: none;
+}
+
+.flexbox {
+  
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  margin: 20px;
+}
+
+.search > h3 {
+  font-weight: normal;
+}
+
+.search > h1,
+.search > h3 {
+  color: white;
+  margin-bottom: 15px;
+  text-shadow: 0 1px #0091c2;
+}
+
+.search > div {
+  display: inline-block;
+  position: relative;
+  filter: drop-shadow(0 1px #0091c2);
+}
+
+.search > div:after {
+  content: "";
+  background: white;
+  width: 4px;
+  height: 20px;
+  position: absolute;
+  top:30px;
+  
+  transform: rotate(135deg);
+}
+
+.search > div > input {
+  color: white;
+  font-size: 16px;
+  background: transparent;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border: solid 3px white;
+  outline: none;
+  border-radius: 35px;
+  transition: width 0.5s;
+}
+
+.search > div > input::placeholder {
+  color: #efefef;
+  opacity: 0;
+  transition: opacity 150ms ease-out;
+}
+
+.search > div > input:focus::placeholder {
+  opacity: 1;
+}
+
+.search > div > input:focus,
+.search > div > input:not(:placeholder-shown) {
+  width: 300px;
+}
+
+.primaryButton1 {
+  position: relative;
+  left: 575px;
+  
+  padding: 0 15px;
+  height: 20px;
+  font-size: 80%;
+  font-weight: bolder;
+  color: white;
+  text-shadow: 0 1px #e3f1f1;
+  background: rgb(242, 176, 255);
+  border: 1px solid;
+  border-color: black black black;
+  border-radius: 40px;
+ -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-shadow: inset 0 5px white, 0 5px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 1px rgb(242, 176, 255), 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+

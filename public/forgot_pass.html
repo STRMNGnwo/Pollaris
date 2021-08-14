@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <title>Forgotton Password</title>
+    <head>
+        <script src="/__/firebase/8.3.0/firebase-app.js"></script>
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="/__/firebase/8.3.0/firebase-analytics.js">
+        </script><!-- Add Firebase products that you want to use -->
+        <script src="/__/firebase/8.3.0/firebase-auth.js"></script>
+        <script src="/__/firebase/8.3.0/firebase-firestore.js"></script>
+        <!-- Initialize Firebase -->
+        <script src="/__/firebase/init.js"></script>
+        <script src="/JavaScripts/login.js"></script> <!-- used to call functions such as login and loginWithGoogle-->
+        <script src="/JavaScripts/verification.js"></script>
+
+        <link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/css/mdb.min.css">
+        <link rel="stylesheet" type="text/css" href="/CSS/resetPass.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type="text/JavaScript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/js/jquery.min.js"></script>
+        <script type="text/JavaScript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.2/js/mdb.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Fredoka+One&family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+    <style>
+        body{
+        background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+        }
+     </style>
+    <body>
+        <h2><a href="sign_in.html" class="logo" style="color: white; font-weight: bold;">Pollaris</a></h2>
+
+        <div class="card reset_form">
+            <div class="card-body">
+                <h3 class="card-title text-center">Reset Password</h3>
+                
+                <div class="card-text">
+                        <div class="form-group">
+                            <label for="emailInput">Please enter your email address, the link to reset password will be sent to this address.</label>
+                            <input id="resetPasswordEmail" type="email" class="form-control form-control-sm" placeholder="Email address" autocomplete="on" required>
+                        </div>
+        
+                        <button id="resetPassword" onclick="sendResetPasswordEmail();" class="btn btn-primary btn-block">Submit</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
