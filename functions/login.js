@@ -1,5 +1,6 @@
 const functions = require('firebase-functions');
 const cors = require('cors')({origin: "https://www.pollaris.ie"});
+const admin= require('firebase-admin');
 
 
 exports.authorizedendpoint = functions.https.onRequest((request, response) => {

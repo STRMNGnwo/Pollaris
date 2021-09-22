@@ -12,7 +12,7 @@ function verification() //checking if access token is valid and belongs to the c
             if (xhr.status === OK) {
                 console.log("authorised user");
                 var decodedToken = xhr.responseText; //this should return a decoded token which can be used to access stuff like email and if it is verified.
-                window.location.replace("./createAPoll.html");
+                window.location.replace("../createAPoll.html");
                 //console.log("Decoded ID Token:"+xhr.responseText);
                 //return  decodedToken;
             }
